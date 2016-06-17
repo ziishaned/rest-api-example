@@ -2,26 +2,26 @@
 
 ### Routes List:
 
-|--------|----------|---------------------------------|------|-------------------------------------------------------|------------|
-| Domain | Method   | URI                             | Name | Action                                                | Middleware |
-|--------|----------|---------------------------------|------|-------------------------------------------------------|------------|
-|        | POST     | comments                        |      | App\Http\Controllers\CommentsController@createComment | web        |
-|        | GET|HEAD | comments                        |      | App\Http\Controllers\CommentsController@getComments   | web        |
-|        | GET|HEAD | comments/{id}                   |      | App\Http\Controllers\CommentsController@getComment    | web        |
-|        | DELETE   | comments/{id}                   |      | App\Http\Controllers\CommentsController@deleteComment | web        |
-|        | PUT      | comments/{id}                   |      | App\Http\Controllers\CommentsController@updateComment | web        |
-|        | POST     | posts                           |      | App\Http\Controllers\PostsController@createPost       | web        |
-|        | GET|HEAD | posts                           |      | App\Http\Controllers\PostsController@getPosts         | web        |
-|        | PUT      | posts/{id}                      |      | App\Http\Controllers\PostsController@updatePost       | web        |
-|        | GET|HEAD | posts/{id}                      |      | App\Http\Controllers\PostsController@getPost          | web        |
-|        | DELETE   | posts/{id}                      |      | App\Http\Controllers\PostsController@deletePost       | web        |
-|        | GET|HEAD | users                           |      | App\Http\Controllers\UsersController@getUsers         | web        |
-|        | POST     | users                           |      | App\Http\Controllers\UsersController@createUser       | web        |
-|        | PUT      | users/{id}                      |      | App\Http\Controllers\UsersController@updateUser       | web        |
-|        | GET|HEAD | users/{id}                      |      | App\Http\Controllers\UsersController@getUser          | web        |
-|        | DELETE   | users/{id}                      |      | App\Http\Controllers\UsersController@deleteUser       | web        |
-|        | GET|HEAD | users/{id}/comments             |      | App\Http\Controllers\UsersController@getUserComments  | web        |
-|        | GET|HEAD | users/{id}/comments/{commentId} |      | App\Http\Controllers\UsersController@getUserComment   | web        |
-|        | GET|HEAD | users/{id}/posts                |      | App\Http\Controllers\UsersController@getUserPosts     | web        |
-|        | GET|HEAD | users/{id}/posts/{postId}       |      | App\Http\Controllers\UsersController@getUserPost      | web        |
-+--------+----------+---------------------------------+------+-------------------------------------------------------+------------+
+|----------|---------------------------------|-------------------------------------------------------|
+| Method   | URI                             | Action                                                |
+|----------|---------------------------------|-------------------------------------------------------|
+| POST     | comments                        | App\Http\Controllers\CommentsController@createComment |
+| GET|HEAD | comments                        | App\Http\Controllers\CommentsController@getComments   |
+| GET|HEAD | comments/{id}                   | App\Http\Controllers\CommentsController@getComment    |
+| DELETE   | comments/{id}                   | App\Http\Controllers\CommentsController@deleteComment |
+| PUT      | comments/{id}                   | App\Http\Controllers\CommentsController@updateComment |
+| POST     | posts                           | App\Http\Controllers\PostsController@createPost       |
+| GET|HEAD | posts                           | App\Http\Controllers\PostsController@getPosts         |
+| PUT      | posts/{id}                      | App\Http\Controllers\PostsController@updatePost       |
+| GET|HEAD | posts/{id}                      | App\Http\Controllers\PostsController@getPost          |
+| DELETE   | posts/{id}                      | App\Http\Controllers\PostsController@deletePost       |
+| GET|HEAD | users                           | App\Http\Controllers\UsersController@getUsers         |
+| POST     | users                           | App\Http\Controllers\UsersController@createUser       |
+| PUT      | users/{id}                      | App\Http\Controllers\UsersController@updateUser       |
+| GET|HEAD | users/{id}                      | App\Http\Controllers\UsersController@getUser          |
+| DELETE   | users/{id}                      | App\Http\Controllers\UsersController@deleteUser       |
+| GET|HEAD | users/{id}/comments             | App\Http\Controllers\UsersController@getUserComments  |
+| GET|HEAD | users/{id}/comments/{commentId} | App\Http\Controllers\UsersController@getUserComment   |
+| GET|HEAD | users/{id}/posts                | App\Http\Controllers\UsersController@getUserPosts     |
+| GET|HEAD | users/{id}/posts/{postId}       | App\Http\Controllers\UsersController@getUserPost      |
+
