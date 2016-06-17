@@ -1,9 +1,5 @@
 <?php
 
-$app->get('/', function () {
-    return "Welcome to RESTful API!";
-});
-
 $app->get('users', ['uses' => 'UsersController@getUsers', ]);
 $app->get('users/{id}/posts', ['uses' => 'UsersController@getUserPosts', ]);
 $app->get('users/{id}/posts/{postId}', ['uses' => 'UsersController@getUserPost', ]);
