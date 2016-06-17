@@ -1,6 +1,18 @@
 # RESTful API
 
+An example RESTful API built on top of Lumen 5.2.
+
+## Features
+
+- RESTful routing
+- Models with proper relationships
+- Controllers/Models etc with proper separation of concerns
+- JWT Authentication
+- RESTful errors
+
 ### Routes List:
+
+## Comments
 
 | Method     | URI                               | Action                                                  |
 |------------|-----------------------------------|---------------------------------------------------------|
@@ -9,11 +21,21 @@
 | `GET/HEAD` | `comments/{id}`                   | `App\Http\Controllers\CommentsController@getComment`    |
 | `DELETE`   | `comments/{id}`                   | `App\Http\Controllers\CommentsController@deleteComment` |
 | `PUT`      | `comments/{id}`                   | `App\Http\Controllers\CommentsController@updateComment` |
+
+## Posts
+
+| Method     | URI                               | Action                                                  |
+|------------|-----------------------------------|---------------------------------------------------------|
 | `POST`     | `posts`                           | `App\Http\Controllers\PostsController@createPost`       |
 | `GET/HEAD` | `posts`                           | `App\Http\Controllers\PostsController@getPosts`         |
 | `PUT`      | `posts/{id}`                      | `App\Http\Controllers\PostsController@updatePost`       |
 | `GET/HEAD` | `posts/{id}`                      | `App\Http\Controllers\PostsController@getPost`          |
 | `DELETE`   | `posts/{id}`                      | `App\Http\Controllers\PostsController@deletePost`       |
+
+## Users
+
+| Method     | URI                               | Action                                                  |
+|------------|-----------------------------------|---------------------------------------------------------|
 | `GET/HEAD` | `users`                           | `App\Http\Controllers\UsersController@getUsers`         |
 | `POST`     | `users`                           | `App\Http\Controllers\UsersController@createUser`       |
 | `PUT`      | `users/{id}`                      | `App\Http\Controllers\UsersController@updateUser`       |
