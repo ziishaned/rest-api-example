@@ -1,21 +1,27 @@
-## Lumen PHP Framework
+# RESTful API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+### Routes List:
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
++--------+----------+---------------------------------+------+-------------------------------------------------------+------------+
+| Domain | Method   | URI                             | Name | Action                                                | Middleware |
++--------+----------+---------------------------------+------+-------------------------------------------------------+------------+
+|        | POST     | comments                        |      | App\Http\Controllers\CommentsController@createComment | web        |
+|        | GET|HEAD | comments                        |      | App\Http\Controllers\CommentsController@getComments   | web        |
+|        | GET|HEAD | comments/{id}                   |      | App\Http\Controllers\CommentsController@getComment    | web        |
+|        | DELETE   | comments/{id}                   |      | App\Http\Controllers\CommentsController@deleteComment | web        |
+|        | PUT      | comments/{id}                   |      | App\Http\Controllers\CommentsController@updateComment | web        |
+|        | POST     | posts                           |      | App\Http\Controllers\PostsController@createPost       | web        |
+|        | GET|HEAD | posts                           |      | App\Http\Controllers\PostsController@getPosts         | web        |
+|        | PUT      | posts/{id}                      |      | App\Http\Controllers\PostsController@updatePost       | web        |
+|        | GET|HEAD | posts/{id}                      |      | App\Http\Controllers\PostsController@getPost          | web        |
+|        | DELETE   | posts/{id}                      |      | App\Http\Controllers\PostsController@deletePost       | web        |
+|        | GET|HEAD | users                           |      | App\Http\Controllers\UsersController@getUsers         | web        |
+|        | POST     | users                           |      | App\Http\Controllers\UsersController@createUser       | web        |
+|        | PUT      | users/{id}                      |      | App\Http\Controllers\UsersController@updateUser       | web        |
+|        | GET|HEAD | users/{id}                      |      | App\Http\Controllers\UsersController@getUser          | web        |
+|        | DELETE   | users/{id}                      |      | App\Http\Controllers\UsersController@deleteUser       | web        |
+|        | GET|HEAD | users/{id}/comments             |      | App\Http\Controllers\UsersController@getUserComments  | web        |
+|        | GET|HEAD | users/{id}/comments/{commentId} |      | App\Http\Controllers\UsersController@getUserComment   | web        |
+|        | GET|HEAD | users/{id}/posts                |      | App\Http\Controllers\UsersController@getUserPosts     | web        |
+|        | GET|HEAD | users/{id}/posts/{postId}       |      | App\Http\Controllers\UsersController@getUserPost      | web        |
++--------+----------+---------------------------------+------+-------------------------------------------------------+------------+
