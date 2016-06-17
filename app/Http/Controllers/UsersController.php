@@ -26,7 +26,7 @@ class UsersController extends Controller
             return Response::json($users);
         }
 
-        return Response::internalError('Unable to create the user');
+        return Response::internalError('Unable to get the users');
     }
 
     public function getUser($id)
@@ -96,6 +96,6 @@ class UsersController extends Controller
             return Response::json($user);
         }
 
-        return Response::internalError('Unable to create the user');
+        return Response::internalError('Unable to update the user');
     }
 }

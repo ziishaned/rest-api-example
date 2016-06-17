@@ -16,6 +16,8 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->longText('post_title');
             $table->longText('post_content');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
