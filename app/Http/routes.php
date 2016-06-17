@@ -1,10 +1,14 @@
 <?php
 
 $app->get('/', function () {
-    return view('home');
+    return "Welcome to RESTful API!";
 });
 
 $app->get('users', ['uses' => 'UsersController@getUsers', ]);
+$app->get('users/{id}/posts', ['uses' => 'UsersController@getUserPosts', ]);
+$app->get('users/{id}/posts/{postId}', ['uses' => 'UsersController@getUserPost', ]);
+$app->get('users/{id}/comments', ['uses' => 'UsersController@getUserComments', ]);
+$app->get('users/{id}/comments/{commentId}', ['uses' => 'UsersController@getUserComment', ]);
 $app->get('users/{id}', ['uses' => 'UsersController@getUser', ]);
 $app->post('users', ['uses' => 'UsersController@createUser', ]);
 $app->delete('users/{id}', ['uses' => 'UsersController@deleteUser', ]);

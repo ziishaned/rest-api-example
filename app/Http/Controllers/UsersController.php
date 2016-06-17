@@ -39,6 +39,46 @@ class UsersController extends Controller
         return Response::json($user);
     }
 
+    public function getUserPosts($id)
+    {
+        $user = $this->users->getUser($id);
+        if( !$user ) {
+            return Response::notFound('User not found');
+        }
+
+        return $user->posts;
+    }
+
+    public function getUserComments($id)
+    {
+        $user = $this->users->getUser($id);
+        if( !$user ) {
+            return Response::notFound('User not found');
+        }
+
+        return $user->comments;
+    }
+
+    public function getUserComment($id, $commentId)
+    {
+        $user = $this->users->getUser($id);
+        if( !$user ) {
+            return Response::notFound('User not found');
+        }
+
+        return $user->comments()->find($commentId);
+    }
+
+    public function getUserPost($id, $postId)
+    {
+        $user = $this->users->getUser($id);
+        if( !$user ) {
+            return Response::notFound('User not found');
+        }
+
+        return $user->posts()->find($postId);
+    }
+
     public function createUser()
     {
         $validator = Validator::make($this->request->all(), [

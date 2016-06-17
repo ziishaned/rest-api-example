@@ -94,4 +94,9 @@ class PostsController extends Controller
 
         return Response::internalError('Unable to update the post');
     }
+
+    public function getUserPosts($user_id)
+    {
+        return Response::json($this->posts->getUserPosts($user_id));
+    }
 }   

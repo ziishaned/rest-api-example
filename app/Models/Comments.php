@@ -15,6 +15,16 @@ class Comments extends Model
         'updated_at', 
     ];
 
+    public function posts()
+    {
+        return $this->belongsTo('App\Models\Posts', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'id');
+    }
+
     public function getComments()
     {
         $query = $this;

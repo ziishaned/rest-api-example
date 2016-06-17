@@ -20,6 +20,16 @@ class Users extends Model
         'updated_at', 
     ];
 
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comments', 'user_id');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Posts', 'user_id');
+    }
+
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
