@@ -1,4 +1,4 @@
-# RESTful API
+# :neutral_face: RESTful API
 
 An example RESTful API built on top of Lumen 5.2.
 
