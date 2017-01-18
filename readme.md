@@ -12,7 +12,7 @@ An example RESTful API built on top of Lumen 5.2.
 
 ## Routes List:
 
-## Comments
+### Comments
 
 | Method     | URI                               | Action                                                  |
 |------------|-----------------------------------|---------------------------------------------------------|
@@ -22,7 +22,7 @@ An example RESTful API built on top of Lumen 5.2.
 | `DELETE`   | `comments/{id}`                   | `App\Http\Controllers\CommentsController@deleteComment` |
 | `PUT`      | `comments/{id}`                   | `App\Http\Controllers\CommentsController@updateComment` |
 
-## Posts
+### Posts
 
 | Method     | URI                               | Action                                                  |
 |------------|-----------------------------------|---------------------------------------------------------|
@@ -32,7 +32,7 @@ An example RESTful API built on top of Lumen 5.2.
 | `GET/HEAD` | `posts/{id}`                      | `App\Http\Controllers\PostsController@getPost`          |
 | `DELETE`   | `posts/{id}`                      | `App\Http\Controllers\PostsController@deletePost`       |
 
-## Users
+### Users
 
 | Method     | URI                               | Action                                                  |
 |------------|-----------------------------------|---------------------------------------------------------|
