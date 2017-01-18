@@ -10,7 +10,7 @@ An example RESTful API built on top of Lumen 5.2.
 - JWT Authentication
 - RESTful errors
 
-### Routes List:
+## Routes List:
 
 ## Comments
 
